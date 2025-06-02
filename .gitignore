@@ -1,3 +1,6 @@
+## My build directory
+build
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -37,6 +40,7 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+.auctex-auto
 
 ## Auxiliary and intermediate files from other packages:
 # algorithms

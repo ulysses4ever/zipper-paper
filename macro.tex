@@ -1,0 +1,101 @@
+\newcommand{\s}{$\hphantom{~}$}
+\newcommand{\ind}{\s\s\s\s}
+\newcommand{\Ra}{$\Rightarrow$\s}
+\newcommand{\ra}{$\rightarrow$\s}
+\newcommand{\vs}{\vspace{0.2cm}\\}
+\newcommand{\fa}{$\forall$}
+
+\lstdefinestyle{fancy}{
+language=Haskell,
+deletekeywords={Int,Bool,String,Functor,Char,True,False,
+  Maybe,Nothing,Just,Show,show,Monad,catMaybes,const,id},
+morekeywords={family},
+basicstyle=\color{cbasic}\rmfamily\small,
+identifierstyle=\color{cid}\rmfamily\itshape\small,
+keywordstyle=\color{ckey}\rmfamily\bfseries\small,
+xleftmargin=\parindent,
+aboveskip=0.2cm,
+belowskip=0.2cm,
+basewidth=0.48em,
+numberbychapter=false,
+showstringspaces=false,
+moredelim=[is][\color{ccom}\itshape]{/}{/},
+escapeinside={(/}{/)},
+literate={:: }{{$::$}}2 {=>}{{$\Rightarrow$}}2 {->}{{\ra}}2
+{∀}{{\fa}}1 {==}{{\tteq}}1 {...}{{\scriptsize\bf\dots}}2
+{>>>}{{\footnotesize\comp}}3 {>=>}{{\footnotesize\kleisli}}3
+{.1}{{$_\mathit{1}$}}1 {.2}{{$_\mathit{2}$}}1
+{.3}{{$_\mathit{3}$}}1
+{.i}{{$_\mathit{i}$}}1 {.j}{{$_\mathit{j}$}}1
+{.n}{{$_\mathit{n}$}}1 {.k}{{$_\mathit{k}$}}1
+{.R}{{\scriptsize$_\mathit{\hspace{0,07cm} \boldsymbol{R}}$}}1
+{..R}{{\scriptsize$_\mathit{\hspace{-0,02cm} \boldsymbol{R}}$}}1
+{,R}{{\scriptsize$_\mathit{\hspace{-0,05cm} \boldsymbol{R}}$}}1
+{,,R}{{\scriptsize$_\mathit{\boldsymbol{R}}$}}1
+{.Aux}{{\large$_\mathit{\hspace{0,05cm} Aux}$}}3
+{.AExpr}{{\large$_\mathit{\hspace{0,05cm} AExpr}$}}5
+{..Aux}{{\large$_\mathit{\hspace{-0,03cm} Aux}$}}3
+{@}{{@\hspace{-0,045cm}}}2
+{_}{{\underline{\hspace{0.45em}}}}1
+{[.}{{[\hspace{-0,06cm}}}1
+{[..}{{[\hspace{-0,1cm}}}1
+{,,]}{{\hspace{-0,1cm}}]}1
+{,,,]}{{\hspace{-0,16cm}}]}1
+{,]}{{\hspace{-0,06cm}]}}1
+{+}{{\scriptsize+}}1
+{,*.}{{\nhs$*$\nhs}}1
+{+.}{{\footnotesize+}}1
+{.+.}{{\nhs\footnotesize+\nhs}}1
+{*.}{{\footnotesize$\times$}}1
+{.*.}{{\nhs\footnotesize$\times$\nhs}}1
+{.-}{{\nhs-}}1
+{-.}{{-\nhs}}1
+}
+
+\lstdefinestyle{ttstyle}{
+basicstyle=\color{ctt}\ttfamily,
+xleftmargin=\parindent,
+aboveskip=0.2cm,
+belowskip=0.2cm,
+basewidth=0.5em,
+literate={>>>}{{>\nhs>\nhs>}}2 {>=>}{{>\nhs=\nhs>}}2
+}
+
+\urlstyle{same}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\definecolor{cbasic}{HTML}{5C3566}
+\definecolor{cid}{HTML}{002184}
+\definecolor{ckey}{HTML}{BE6A0D}
+\definecolor{ccom}{HTML}{A0821E}
+\definecolor{ctt}{HTML}{223244}
+
+\newcommand{\hs}{\hspace{0.1cm}}
+\newcommand{\nhs}{\hspace{-0.06cm}}
+\newcommand{\Nhs}{\hspace{-0.1cm}}
+
+\newcommand{\tg}{\textgreater}
+\newcommand{\tteq}{{\scriptsize$\thicksim$}}
+\newcommand{\comp}{\tg\Nhs\tg\Nhs\tg}
+\newcommand{\kleisli}{\tg\Nhs=\Nhs\tg}
+\newcommand{\ann}{:\texttt{\nhs}:}
+\newcommand{\ds}{.\nhs.\nhs.}
+
+\newcommand{\K}[1]{\lstinline[style=fancy]{#1}}
+
+\newcommand{\lset}{\lstset{basicstyle=\normalsize\ttfamily}}
+
+\makeatletter
+\lst@AddToHook{OnEmptyLine}{\vspace{-0.2255cm}}
+\makeatother
+
+\makeatletter
+\newenvironment{CenteredBox}{
+\begin{Sbox}}{
+\end{Sbox}\centerline{\parbox{\wd\@Sbox}{\TheSbox}}}
+\makeatother
